@@ -24,7 +24,7 @@ public class UserForm implements Serializable {
     private String kanaName;
 
     /** 英字氏名 */
-    @Required
+    //@Required
     @Domain("alphabetName")
     private String alphabetName;
 
@@ -54,7 +54,7 @@ public class UserForm implements Serializable {
     private String homePhoneNumber;
 
     /** 携帯電話番号 */
-    @Required
+    //@Required
     @Domain("mobilePhoneNumber")
     private String mobilePhoneNumber;
 
@@ -83,7 +83,7 @@ public class UserForm implements Serializable {
     private String otherJob;
 
     /** 治療歴有無 */
-    @Required
+    //@Required
     @Domain("treated")
     private String treated;
 
