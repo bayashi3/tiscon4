@@ -2,6 +2,7 @@ package jp.co.tis.tiscon4.common.code;
 
 public enum JobType implements CodeEnum {
 
+    NONE("","選択してください"),
     /** 経営自営 */
     MANAGER("経営自営", "経営・自営業"),
     /** 会社員 */

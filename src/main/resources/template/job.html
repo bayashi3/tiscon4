@@ -55,7 +55,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label>お勤め先郵便番号 例：123-4567</label>
+                                    <label>お勤め先郵便番号 （例：123-4567）</label>
                                 </td>
                                 <td>
                                     <!--<p>例：123-4567</p>-->
@@ -102,12 +102,16 @@
                                     <label>業種</label>
                                 </td>
                                 <td>
-                                    <div th:each="item : ${industryTypes}" class="field"
+                                    <select name = "industryType">
+                                        <option  th:each="item : ${industryTypes}" class="field"
+                                                 th:classappend="${errors.hasError('industryType')} ? 'error'" th:value="${item.code}" th:text="${item.label}" th:checked="${form.industryType}==${item.code}"/></option>
+                                    </select>
+                                    <!--<div th:each="item : ${industryTypes}" class="field"
                                          th:classappend="${errors.hasError('industryType')} ? 'error'">
                                         <input type="radio" name="industryType" th:value="${item.code}"
                                                th:text="${item.label}" th:field="*{industryType}"
                                                th:checked="${form.industryType}==${item.code}"/>
-                                    </div>
+                                    </div>-->
                                     <p th:if="${errors.hasError('industryType')}"
                                        th:text="${errors.getMessage('industryType')}" class="error-message">
                                     </p>

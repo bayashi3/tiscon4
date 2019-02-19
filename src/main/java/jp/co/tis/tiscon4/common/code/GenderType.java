@@ -2,6 +2,8 @@ package jp.co.tis.tiscon4.common.code;
 
 public enum GenderType implements CodeEnum {
 
+    NONE("","選択してください"),
+
     /** 男性 */
     MALE("male", "男性"),
     /** 女性 */

@@ -2,6 +2,7 @@ package jp.co.tis.tiscon4.common.code;
 
 public enum IndustryType implements CodeEnum {
 
+    NONE("","選択してください"),
     /** 農林水鉱 */
     PRIMARY("農林水鉱", "農業・林業・水産業・鉱業"),
     /** 建築不動産 */

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>ご本人情報の入力</title>
@@ -9,7 +10,6 @@
     <link rel="stylesheet" th:href="@{/css/main.css}">
 </head>
 <body>
-<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 <nav th:insert="header.html :: header"></nav>
 
 <div class="full height image">
@@ -130,7 +130,7 @@
                                 <td>
                                     <!--<p>例：123-4567</p>-->
                                     <div class="field" th:classappend="${errors.hasError('zipCode')} ? 'error'">
-                                        <input type="text" class="zipcode" name="zipCode" th:value="${form.zipCode}"/>
+                                        <input type="text" class="zipcode" name="zipCode" th:value="${form.zipCode}"　onKeyUp="AjaxZip3.zip2addr(this,'','address','address');"/>
                                         <p th:if="${errors.hasError('zipCode')}"
                                            th:text="${errors.getMessage('zipCode')}" class="error-message">
                                         </p>
@@ -145,7 +145,7 @@
                                 <td>
                                     <!--<p>例：東京都新宿区西新宿８－１７－１</p>-->
                                     <div class="field" th:classappend="${errors.hasError('address')} ? 'error'">
-                                        <input type="text" name="address" th:value="${form.address}"/>
+                                        <input type="text" name="address" ><!--th:value="${form.address}"/-->
                                         <p th:if="${errors.hasError('address')}"
                                            th:text="${errors.getMessage('address')}" class="error-message">
                                         </p>
@@ -205,9 +205,10 @@
                                     <!--<p style="color:red;">＊</p>-->
                                 </td>
                                 <td>
-                                    <select name = "married">
+                                    <select name = "married" id = married>
                                         <option  th:each="item : ${marriedTypes}" class="field"
                                                  th:classappend="${errors.hasError('married')} ? 'error'" th:value="${item.code}" th:text="${item.label}" th:checked="${form.married}==${item.code}"/>あり</option>
+
                                     </select>
                                     <!--<div th:each="item : ${marriedTypes}" class="field"
                                          th:classappend="${errors.hasError('married')} ? 'error'">
