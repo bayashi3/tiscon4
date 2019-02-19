@@ -39,11 +39,11 @@
                             <tbody>
                             <tr>
                                 <td>
-                                    <label>お名前（漢字）</label>
-                                    <p style="color:red;">＊</p>
+                                    <label><font color="red">＊</font>お名前（漢字）（例：ＴＩＳ太郎）</label>
+                                    <!--<p style="color:red;">＊</p>-->
                                 </td>
                                 <td>
-                                    <p>例：ＴＩＳ　太郎</p>
+                                    <!--<p>例：ＴＩＳ　太郎</p>-->
                                     <div class="field" th:classappend="${errors.hasError('kanjiName')} ? 'error'">
                                         <input type="text" name="kanjiName" th:value="${form.kanjiName}"/>
                                         <p th:if="${errors.hasError('kanjiName')}"
@@ -54,11 +54,11 @@
                             </tr>
                             <tr>
                                 <td style="white-space: nowrap;">
-                                    <label>お名前（カタカナ）</label>
-                                    <p style="color:red;">＊</p>
+                                    <label><font color="red">＊</font> お名前（カタカナ）（例：ティーアイエス　タロウ）</label>
+                                    <!--<p style="color:red;">＊</p>-->
                                 </td>
                                 <td>
-                                    <p>例：ティーアイエス　タロウ</p>
+                                    <!--<p>例：ティーアイエス　タロウ</p>-->
                                     <div class="field" th:classappend="${errors.hasError('kanaName')} ? 'error'">
                                         <input type="text" name="kanaName" th:value="${form.kanaName}"/>
                                         <p th:if="${errors.hasError('kanaName')}"
@@ -67,6 +67,7 @@
                                     </div>
                                 </td>
                             </tr>
+<!--
                             <tr>
                                 <td>
                                     <label>お名前（ローマ字）</label>
@@ -82,10 +83,11 @@
                                     </div>
                                 </td>
                             </tr>
+-->
                             <tr>
                                 <td>
-                                    <label>性別</label>
-                                    <p style="color:red;">＊</p>
+                                    <label><font color="red">＊</font>性別</label>
+                                    <!--<p style="color:red;">＊</p>-->
                                 </td>
                                 <td>
                                     <div th:each="item : ${genderTypes}" class="field"
@@ -103,11 +105,11 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label>生年月日（半角）</label>
-                                    <p style="color:red;">＊</p>
+                                    <label><font color="red">＊</font>生年月日</label>
+                                    <!--<p style="color:red;">＊</p>-->
                                 </td>
                                 <td>
-                                    <p>例：1990/01/01</p>
+                                    <!--<p>例：1990/01/01</p>-->
                                     <div class="field" th:classappend="${errors.hasError('dateOfBirth')} ? 'error'">
                                         <input type="text" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
                                         <p th:if="${errors.hasError('dateOfBirth')}"
@@ -118,11 +120,11 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label>郵便番号（半角）</label>
-                                    <p style="color:red;">＊</p>
+                                    <label><font color="red">＊</font>郵便番号（例：123-4567）</label>
+                                    <!--<p style="color:red;">＊</p>-->
                                 </td>
                                 <td>
-                                    <p>例：123-4567</p>
+                                    <!--<p>例：123-4567</p>-->
                                     <div class="field" th:classappend="${errors.hasError('zipCode')} ? 'error'">
                                         <input type="text" class="zipcode" name="zipCode" th:value="${form.zipCode}"/>
                                         <p th:if="${errors.hasError('zipCode')}"
@@ -133,11 +135,11 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label>ご住所（全角）</label>
-                                    <p style="color:red;">＊</p>
+                                    <label><font color="red">＊</font>ご住所（例：東京都新宿区西新宿８－１７－１）</label>
+                                    <!--<p style="color:red;">＊</p>-->
                                 </td>
                                 <td>
-                                    <p>例：東京都新宿区西新宿８－１７－１</p>
+                                    <!--<p>例：東京都新宿区西新宿８－１７－１</p>-->
                                     <div class="field" th:classappend="${errors.hasError('address')} ? 'error'">
                                         <input type="text" name="address" th:value="${form.address}"/>
                                         <p th:if="${errors.hasError('address')}"
@@ -148,11 +150,11 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label>自宅電話番号（半角）</label>
-                                    <p style="color:red;">＊</p>
+                                    <label><font color="red">＊</font>ご連絡先 （例：00-1111-2222）</label>
+                                    <!--<p style="color:red;">＊</p>-->
                                 </td>
                                 <td>
-                                    <p>例：00-1111-2222</p>
+                                    <!--<p>例：00-1111-2222</p>-->
                                     <div class="field" th:classappend="${errors.hasError('homePhoneNumber')} ? 'error'">
                                         <input type="text" name="homePhoneNumber" th:value="${form.homePhoneNumber}"/>
                                         <p th:if="${errors.hasError('homePhoneNumber')}"
@@ -162,7 +164,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <!--<td>
                                     <label>携帯電話番号（半角）</label>
                                     <p style="color:red;">＊</p>
                                 </td>
@@ -177,14 +179,14 @@
                                         </p>
                                     </div>
                                 </td>
-                            </tr>
+                            </tr>-->
                             <tr>
                                 <td>
-                                    <label>メールアドレス（半角）</label>
-                                    <p style="color:red;">＊</p>
+                                    <label><font color="red">＊</font>メールアドレス（例：tiscon@example.com）</label>
+                                    <!--<p style="color:red;">＊</p>-->
                                 </td>
                                 <td>
-                                    <p>例：tiscon@example.com</p>
+                                    <!--<p>例：tiscon@example.com</p>-->
                                     <div class="field" th:classappend="${errors.hasError('emailAddress')} ? 'error'">
                                         <input type="text" name="emailAddress" th:value="${form.emailAddress}"/>
                                         <p th:if="${errors.hasError('emailAddress')}"
@@ -195,8 +197,8 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label>配偶者有無</label>
-                                    <p style="color:red;">＊</p>
+                                    <label><font color="red">＊</font>配偶者有無</label>
+                                    <!--<p style="color:red;">＊</p>-->
                                 </td>
                                 <td>
                                     <div th:each="item : ${marriedTypes}" class="field"
@@ -212,8 +214,8 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label>昨年の所得（半角）</label>
-                                    <p style="color:red;">＊</p>
+                                    <label><font color="red">＊</font>昨年の所得（半角）</label>
+                                    <!--<p style="color:red;">＊</p>-->
                                 </td>
                                 <td>
                                     <div class="field" th:classappend="${errors.hasError('income')} ? 'error'">
@@ -227,8 +229,9 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <label>ご職業</label>
-                                    <p style="color:red;">＊</p></td>
+                                    <label><font color="red">＊</font>ご職業</label>
+                                    <!--<p style="color:red;">＊</p>-->
+                                </td>
                                 <td>
                                     <div th:each="item : ${jobTypes}" class="field"
                                          th:classappend="${errors.hasError('job')} ? 'error'">
@@ -257,6 +260,7 @@
                                     </div>
                                 </td>
                             </tr>
+                            <!--
                             <tr>
                                 <td>
                                     <label>過去5年以内に、病気やケガで7日間以上にわたって医師の診察・検査・治療・投薬をうけたことがありますか</label>
@@ -291,6 +295,7 @@
                                     </div>
                                 </td>
                             </tr>
+                            -->
                             </tbody>
                         </table>
 
