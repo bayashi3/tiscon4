@@ -93,7 +93,7 @@ public class OrderAction {
         }
         //UniversalDao.findAllBySqlFile(ZipcodeDto.class, "ZIPCODE_LIST");
 
-        //BeanUtil.copy(form, insOrder);
+        BeanUtil.copy(form, insOrder);
 
         ctx.setRequestScopedVar("form", new JobForm());
         ctx.setRequestScopedVar("industryTypes", IndustryType.values());
