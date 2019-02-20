@@ -24,9 +24,9 @@ public class UserForm implements Serializable {
     private String kanaName;
 
     /** 英字氏名 */
-    //@Required
+    /*//@Required
     @Domain("alphabetName")
-    private String alphabetName;
+    private String alphabetName;*/
 
     /** 性別 */
     @Required
@@ -54,9 +54,9 @@ public class UserForm implements Serializable {
     private String homePhoneNumber;
 
     /** 携帯電話番号 */
-    //@Required
+    /*//@Required
     @Domain("mobilePhoneNumber")
-    private String mobilePhoneNumber;
+    private String mobilePhoneNumber;*/
 
     /** メールアドレス */
     @Required
@@ -83,13 +83,13 @@ public class UserForm implements Serializable {
     private String otherJob;
 
     /** 治療歴有無 */
-    //@Required
+    /*//@Required
     @Domain("treated")
-    private String treated;
+    private String treated;*/
 
     /** 既往歴 */
-    @Domain("medicalHistory")
-    private String medicalHistory;
+    /*@Domain("medicalHistory")
+    private String medicalHistory;*/
 
     public String getKanjiName() {
         return kanjiName;
@@ -107,13 +107,13 @@ public class UserForm implements Serializable {
         this.kanaName = kanaName;
     }
 
-    public String getAlphabetName() {
+    /*public String getAlphabetName() {
         return alphabetName;
     }
 
     public void setAlphabetName(String alphabetName) {
         this.alphabetName = alphabetName;
-    }
+    }*/
 
     public String getDateOfBirth() {
         return dateOfBirth;
@@ -155,13 +155,13 @@ public class UserForm implements Serializable {
         this.homePhoneNumber = homePhoneNumber;
     }
 
-    public String getMobilePhoneNumber() {
+    /*public String getMobilePhoneNumber() {
         return mobilePhoneNumber;
     }
 
     public void setMobilePhoneNumber(String mobilePhoneNumber) {
         this.mobilePhoneNumber = mobilePhoneNumber;
-    }
+    }*/
 
     public String getEmailAddress() {
         return emailAddress;
@@ -203,7 +203,7 @@ public class UserForm implements Serializable {
         this.otherJob = otherJob;
     }
 
-    public String getTreated() {
+    /*public String getTreated() {
         return treated;
     }
 
@@ -217,7 +217,7 @@ public class UserForm implements Serializable {
 
     public void setMedicalHistory(String medicalHistory) {
         this.medicalHistory = medicalHistory;
-    }
+    }*/
 
     /**
      * その他の職業欄が正しく入力されているかどうか判定する。
@@ -242,6 +242,7 @@ public class UserForm implements Serializable {
      *
      * @return 既往歴に入力がある場合にtrue
      */
+    /*
     @AssertTrue(message = "{tiscon4.order.inputUser.error.hasValueMedicalHistory}")
     public boolean hasValueMedicalHistory() {
         if (StringUtil.isNullOrEmpty(treated)) {
@@ -252,5 +253,5 @@ public class UserForm implements Serializable {
         }
         return true;
     }
-
+*/
 }
