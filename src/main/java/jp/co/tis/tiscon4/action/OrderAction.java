@@ -91,13 +91,16 @@ public class OrderAction {
             Message message = ValidationUtil.createMessageForProperty("gender", "tiscon4.order.inputUser.error.gender");
             throw new ApplicationException(message);
         }
-
         UniversalDao.findAllBySqlFile(ZipcodeDto.class, "ZIPCODE_LIST");
 
         BeanUtil.copy(form, insOrder);
 
         ctx.setRequestScopedVar("form", new JobForm());
         ctx.setRequestScopedVar("industryTypes", IndustryType.values());
+
+        if(form.getJob().equals("学生")||form.getJob().equals("主婦")||form.getJob().equals("他無職")||form.getJob().equals("パートアルバイト")||form.getJob().equals("年金受給")){
+            return new HttpResponse("redirect://completed");
+            }
 
         return new HttpResponse("job.html");
     }
